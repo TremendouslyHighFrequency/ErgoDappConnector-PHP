@@ -1,0 +1,25 @@
+{
+    "name": "terahertz/ergo-dapp-connector",
+    "autoload": {
+        "psr-4": {
+            "Terahertz\\ErgoDappConnector\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Terahertz",
+            "email": "dao@swamp.audio"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5.0"
+
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Terahertz\\ErgoDappConnector\\DappServiceProvider"
+            ]
+        }
+    }
+}
