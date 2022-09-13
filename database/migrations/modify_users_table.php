@@ -19,6 +19,7 @@ return new class extends Migration
 
             // Make email and name optional
             $table->string('email')->nullable()->change();
+            $table->string('password')->nullable()->change();
             $table->string('name')->nullable()->change();
         });
     }
