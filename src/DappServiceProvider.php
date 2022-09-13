@@ -24,19 +24,26 @@ class DappServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      	// Routes
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
 
+		// Configs
         if ($this->app->runningInConsole()) {
-          $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('ergo-dapp-connector.php'),
-          ], 'config');
+          	$this->publishes([
+            	__DIR__.'/../config/config.php' => config_path('ergo-dapp-connector.php'),
+          	], 'config');
         }
 
+		// View component
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'ergo-dapp-connector');
 
+		// Required alpine js code 
         $this->publishes([
-          __DIR__.'/js' => public_path('vendor/terahertz'),
-      ], 'public');
+            __DIR__.'/js' => public_path('vendor/terahertz'),
+        ], 'public');
+
+		// migration to add a nautilus_address to the user db
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
     }
 }

@@ -9,9 +9,9 @@ Steps to install:
 - set env var for SIGMA_RUST_LAMBDA_URL
 - npm install alpinejs
 - npm install @alpinejs/persist
+- import alpine and persist into your 
 - place   <x-ergo-dapp-connector::nautilus-login /> where you want your login buttons
 - add: <script src="{{ asset('vendor/terahertz/terahertz.js') }}"></script>
 
 Todo:
 - Create tests
-- Aadd
