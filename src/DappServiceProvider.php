@@ -2,6 +2,7 @@
 namespace Terahertz\ErgoDappConnector;
 use Terahertz\ErgoDappConnector\ErgoDappConnector;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class DappServiceProvider extends ServiceProvider
 {
