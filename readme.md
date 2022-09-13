@@ -1,6 +1,8 @@
 Alpha release of a dApp connector for Nautilus Ergo wallet and Laravel web2 authentication. 
 
-Better readme to follow.
+Pre-requisites:  
+- Laravel 9 installation
+- Laravel Breeze installed and migrations run
 
 Steps to install:
 - composer require terahertz/ergo-dapp-connector (Not in Packagist yet)
