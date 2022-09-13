@@ -37,6 +37,7 @@ return new class extends Migration
 
             // Make email and name required
             $table->string('email')->change();
+            $table->string('password')->change();
             $table->string('name')->change();
         });    
     }
