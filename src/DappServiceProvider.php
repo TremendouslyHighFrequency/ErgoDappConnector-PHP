@@ -36,6 +36,7 @@ class DappServiceProvider extends ServiceProvider
 
 		// View component
 		$this->loadViewsFrom(__DIR__.'/../resources/views', 'terahertz');
+        Blade::component('terahertz::nautilus-login', 'nautilus-login');
 
 
 		// Required alpine js code 
