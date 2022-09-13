@@ -35,7 +35,8 @@ class DappServiceProvider extends ServiceProvider
         }
 
 		// View component
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'ergo-dapp-connector');
+		$this->loadViewsFrom(__DIR__.'/../resources/views', 'terahertz');
+
 
 		// Required alpine js code 
         $this->publishes([
