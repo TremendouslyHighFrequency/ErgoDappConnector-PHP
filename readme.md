@@ -6,13 +6,13 @@ Pre-requisites:
 
 Steps to install:
 - composer require terahertz/ergo-dapp-connector (Not in Packagist yet)
-- php artisan vendor:publish --provider="Terahertz\ErgoDappConnector\DappServiceProvider" --tag="config"
 - set env var for SIGMA_RUST_LAMBDA_URL
 - npm install alpinejs
 - npm install @alpinejs/persist
 - import alpine and persist plugin into your app.js
-- place   <x-ergo-dapp-connector::nautilus-login /> where you want your login buttons
-- add: <script src="{{ asset('vendor/terahertz/terahertz.js') }}"></script>
+- place   <x-terahertz::nautilus-login /> where you want your login buttons
+- add: <script src="{{ asset('vendor/terahertz/terahertz.js') }}"></script> to whatever layout file is relevant
+- Setup the lambda (more to come here)
 
 Todo:
 - Create tests
