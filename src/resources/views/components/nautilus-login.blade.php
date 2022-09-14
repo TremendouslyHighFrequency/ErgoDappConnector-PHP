@@ -1,9 +1,9 @@
-<div class="text-center" x-data="terahertzLogin">
+<div class="text-center" id="terahertz-login" x-data="terahertzLogin">
     <template x-if="Alpine.store('terahertzStore').getConnected() == false">    
         <button 
             class="bg-blue-900 text-white px-5 py-2.5 mr-2 mb-2" 
             x-bind="connectWallet"> 
-                <img src="../img/ergo-wallet-white.png" style="max-width: 34px; height: auto; display: inline-block; margin-right: 10px;" alt="Ergo">Connect Wallet
+                Connect Wallet
         </button>     
     </template>
 
@@ -11,7 +11,7 @@
         <button 
         class="bg-blue-900 text-white px-5 py-2.5 mr-2 mb-2" 
         x-bind="login"> 
-            <img src="../img/ergo-wallet-white.png" style="max-width: 34px; height: auto; display: inline-block; margin-right: 10px;" alt="Ergo">Login with Nautilus
+            Login with Nautilus
         </button>     
     </template>
 
