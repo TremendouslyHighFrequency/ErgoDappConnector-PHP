@@ -36,7 +36,7 @@ class DappServiceProvider extends ServiceProvider
         }
 
 		// View component
-		$this->loadViewsFrom(__DIR__.'/../resources/views', 'terahertz');
+		$this->loadViewsFrom(__DIR__.'/../resources/views/components', 'terahertz');
         Blade::component('terahertz::nautilus-login', 'nautilus-login');
 
 
