@@ -75,8 +75,8 @@ document.addEventListener('alpine:init', () => {
                         
                         context.get_change_address().then(function (address) {
                             al.walletAddress = address; // we have an address
-                            Alpine.store('terahertzStatus').setAddress(address);
-                            Alpine.store('terahertzStatus').setConnected();
+                            Alpine.store('terahertzStore').setAddress(address);
+                            Alpine.store('terahertzStore').setConnected();
                             al.walletConnected = true;                           
                         });
                     });
@@ -99,10 +99,10 @@ document.addEventListener('alpine:init', () => {
             if (typeof window.ergo_request_read_access === "undefined") {
                 // Do nothing
             } else {
-            if (Alpine.store('terahertzStatus').getConnected()) {
-                Alpine.store('terahertzStatus').disconnect();
+            if (Alpine.store('terahertzStore').getConnected()) {
+                Alpine.store('terahertzStore').disconnect();
                 this.walletContext = '';
-                Alpine.store('terahertzStatus').setAddress('');
+                Alpine.store('terahertzStore').setAddress('');
                 window.ergoConnector.nautilus.disconnect();
             }
             }
@@ -131,8 +131,8 @@ document.addEventListener('alpine:init', () => {
                         
                         context.get_change_address().then(function (address) {
                             al.walletAddress = address; // we have an address
-                            Alpine.store('terahertzStatus').setAddress(address);
-                            Alpine.store('terahertzStatus').setConnected();
+                            Alpine.store('terahertzStore').setAddress(address);
+                            Alpine.store('terahertzStore').setConnected();
                             
                             // Generate message and pass to Auth function
                             const message = crypto.randomUUID();
@@ -184,7 +184,7 @@ document.addEventListener('alpine:init', () => {
 // Clear browser on logout = TO DO this should be done if the person clears
 let params = (new URL(document.location)).searchParams;
 if(params.has('clear-wallet') === true){
-    Alpine.store('nautilusStatus').disconnect();
-    Alpine.store('nautilusStatus').setAddress('');
+    Alpine.store('nautilusStore').disconnect();
+    Alpine.store('nautilusStore').setAddress('');
 }
 
